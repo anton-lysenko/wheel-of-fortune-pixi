@@ -7,7 +7,6 @@ var FortuneWheel = (function () {
   var currentWinPosition = 0;
   var angleStep = 0;
   var extCircleImg, intCircleImg;
-  var buttonManagerCallback;
 
   function init(appStage, rendererWidth, rendererHeight) {
     var bottomImg = new PIXI.Sprite(loader.resources.bottomImg.texture);
@@ -70,7 +69,7 @@ var FortuneWheel = (function () {
       animationSteps += random;
     }
   }
-
+ //lohic for searching win number on the wheel
   function getWinNumber() {
     for (var i = 0; i < animationSteps; i++) {
       if (currentWinPosition < 11) {

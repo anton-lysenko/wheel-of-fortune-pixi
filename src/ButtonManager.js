@@ -59,23 +59,6 @@ function ButtonManager() {
     }, 3000);
   }
 
-  function onWheelStop(winNumber) {
-    var isGameOver, isRestart;
-    
-    console.log("Win number: ", winNumber);
-    GameStatusPanel.setWheelNumber(winNumber);
-    isGameOver = GameStatusPanel.processGameResult();
-    if (!isGameOver) {
-      enableButtons();
-    } else {
-      //Show game over popup
-      isRestart = confirm("Game over. Would you like to restart?");
-      if (isRestart) {
-        location.reload();
-      }
-    }
-  }
-
   function disableButtons() {
     yellowBtn1.disable();
     yellowBtn3.disable();
